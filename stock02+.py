@@ -1,4 +1,5 @@
 # STOCK MANAGEMENT
+#SQL pw-12345
 import os
 import mysql.connector
 import datetime
@@ -51,7 +52,7 @@ def start():
 
 def login2():
 
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman", database="stock")                              #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345", database="stock")                              #as per system
     mycursor=mydb.cursor()
     a=input("Enter the user id.:")
     b=len(a)
@@ -210,7 +211,7 @@ def deft():
         deft()
      
 def create_database():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")				#change as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")				#change as per system
     mycursor=mydb.cursor()
     speak("please wait , till the pc makes the required setup.")
     print(" Creating PRODUCT table")
@@ -255,7 +256,7 @@ def create_database():
     speak("program is sucessfully setup in your system !")
 
 def list_database():
-        mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")   				#as per system
+        mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")   				#as per system
         mycursor=mydb.cursor()
         sql="show tables;"
         mycursor.execute(sql)
@@ -263,7 +264,7 @@ def list_database():
             print(i)
 
 def add_order():
-            mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")				#as per system
+            mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")				#as per system
             mycursor=mydb.cursor()
             now = datetime.datetime.now()
             sql="INSERT INTO orders (orderid, orderdate, pcode, pprice, pqty, supplier, pcat) values (%s,%s,%s,%s,%s,%s,%s)"
@@ -280,7 +281,7 @@ def add_order():
 
 
 def list_order():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman", database="stock")					#as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345", database="stock")					#as per system
     mycursor=mydb.cursor()
     sql="SELECT * from orders"
     mycursor.execute(sql)
@@ -306,7 +307,7 @@ def db_mgmt( ):
         if p== 3 :
             break
 def add_product():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")				    #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")				    #as per system
     mycursor=mydb.cursor()
     sql="INSERT INTO product(pcode,pname,pprice,pqty,pcat) values (%s,%s,%s,%s,%s)"
     code=int(input("\t\tEnter product code :"))
@@ -326,7 +327,7 @@ def add_product():
     else:
         print("\t\t Product already exist")
 def update_product():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                                   #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                                   #as per system
     mycursor=mydb.cursor()
     code=int(input("Enter the product code :"))
     qty=int(input("Enter the quantity :"))
@@ -337,7 +338,7 @@ def update_product():
     print("\t\t Product details updated")
 
 def delete_product():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                               #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                               #as per system
     mycursor=mydb.cursor()
     code=int(input("Enter the product code :"))
     sql="DELETE FROM product WHERE pcode = %s;"
@@ -368,7 +369,7 @@ def search_product():
             break
 
 def list_product():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                       #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                       #as per system
     mycursor=mydb.cursor()
     sql="SELECT * from product"
     mycursor.execute(sql)
@@ -382,7 +383,7 @@ def list_product():
 
 
 def list_prcode(code):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")
     mycursor=mydb.cursor()
     sql="SELECT * from product WHERE pcode=%s"
     val=(code,)
@@ -397,7 +398,7 @@ def list_prcode(code):
 
 
 def sale_product():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                               #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                               #as per system
     mycursor=mydb.cursor()
     pcode=input("Enter product code: ")
     sql="SELECT count(*) from product WHERE pcode=%s;"
@@ -430,7 +431,7 @@ def sale_product():
         print(" Product is not avalaible")
 
 def list_sale():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                               #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                               #as per system
     mycursor=mydb.cursor()
     sql="SELECT * FROM sales"
     mycursor.execute(sql)
@@ -444,7 +445,7 @@ def list_sale():
                                      
                                   
 def list_prcat(cat):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                   #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                   #as per system
     mycursor=mydb.cursor()
     print (cat)
     sql="SELECT * from product WHERE pcat =%s"
@@ -460,7 +461,7 @@ def list_prcat(cat):
         print("\t\t","-"*97)
 
 def add_user():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                           #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                           #as per system
     mycursor=mydb.cursor()
     uid=input("Enter emaid id :")
     name=input(" Enter Name :")
@@ -473,7 +474,7 @@ def add_user():
 
 
 def list_user():
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="naman",database="stock")                       #as per system
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="12345",database="stock")                       #as per system
     mycursor=mydb.cursor()
     sql="SELECT uid,uname from user"
     mycursor.execute(sql)
