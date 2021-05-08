@@ -15,7 +15,7 @@ Processor			: 	i7 Dual Core
 Hard Disk			:	02TB
 Ram				:	8024 MB
 Note: For Python-MySQL connectivity, following data have been used:-
-Host- localhost, user- root, password- 1234, database- stock
+Host- localhost, user- root, password- 12345, database- stock
 Management password-stock@management
 
 INTRODUCTION
