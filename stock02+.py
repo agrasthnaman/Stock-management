@@ -1,4 +1,4 @@
-# STOCK MANAGEMENT
+# STOCK MANAGEMENT PROJECT
 #SQL pw-12345
 import os
 import mysql.connector
