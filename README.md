@@ -10,16 +10,24 @@ TECHNOLOGICAL SPECIFICATIONS:
 
 SOFTWARE SPECIFICATION:-
 Operating System	:	Windows 10
+
 Platform			:	Python IDLE 3.7
+
 Database			:	MySQL
+
 Languages			:	Python
+
 Modules       : mysql.connector, pyttsx3
+
 
 HARDWARE SPECIFICATION:-             
 
 Processor			: 	i7 Dual Core
+
 Hard Disk			:	02TB
+
 Ram				:	8024 MB
+
 Note: For Python-MySQL connectivity, following data have been used:-
 Host- localhost, user- root, password- 12345, database- stock
 Management password-stock@management
